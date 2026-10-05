@@ -133,3 +133,23 @@ adb install -r anti-env-detect.apk
 检测项集中在 `app/src/main/kotlin/dev/antienv/targets/Targets.kt`，每条是一个 `Target`，写明类名、方法名、参数签名与替换结果。新增或调整目标只需修改该文件，无需改动 hook 引擎。
 
 若目标 App 升级后出现大量 `class absent`，说明混淆类名发生变化，按日志中的类名更新 `Targets.kt` 重新构建即可。
+
+## 许可
+
+本项目基于 [GNU General Public License v3.0](LICENSE) 发布。
+
+```
+AntiEnvDetect — Copyright (C) 2026 TYOPXN360
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+```
