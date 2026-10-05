@@ -1,0 +1,30 @@
+# Gradle
+.gradle/
+build/
+local.properties
+captures/
+.cxx/
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+# 构建产物
+*.apk
+*.aab
+*.ap_
+*.dex
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# 签名
+*.keystore
+*.jks
+keystore.properties
+
+# 系统
+.DS_Store
+Thumbs.db

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:label="AntiEnvDetect"
+        android:supportsRtl="true">
+
+        <!-- libxposed 新框架通过 META-INF/xposed/java_init.list 识别模块；
+             以下 meta-data 用于兼容传统 Xposed 框架的扫描方式 -->
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="Intercepts root/hook/emulator environment detection and suppresses environment reporting." />
+        <meta-data
+            android:name="xposedminversion"
+            android:value="100" />
+
+    </application>
+
+</manifest>
