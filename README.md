@@ -2,6 +2,18 @@
 
 一个 Xposed 模块，用于在 Android 应用中拦截广告 / 风控 SDK 的设备环境检测，并把相关结果改写为"未检测到异常"，同时阻断对应上报通道。
 
+## 针对的应用
+
+| 项 | 值 |
+|---|---|
+| 应用名 | **小蚕** |
+| 包名 | **`com.realtech.xiaocan`** |
+| 版本 | `3.21.2` |
+| 技术形态 | Flutter 应用，Java 层经 **V库加固壳**（`com.appsec` + `com.Proxy`，`libxloader.so` v1.5.2.23）保护，dex 在运行时解密到内存加载 |
+| 模块作用域 | `com.realtech.xiaocan` |
+
+模块的作用对象是该应用内集成的下列 SDK，而非应用自身逻辑。
+
 ## 针对谁
 
 被集成在 App 内、会对设备做 root / 模拟器 / 注入框架检测并据此限制功能的第三方 SDK。本仓库的目标样本是集成在 `com.realtech.xiaocan` 中的这批 SDK：
@@ -76,10 +88,10 @@ RESP ok  {"code":0,...}
 | 框架 | LSPosed **2.x**（实测 2.2.0-it） |
 | LSPosed Manager | 2.2.0-it |
 | Android | minSdk **26** / 8.0 起 |
-| 目标 App | `com.realtech.xiaocan` **3.21.2** |
+| 目标应用 | 小蚕 / `com.realtech.xiaocan` **3.21.2**（V库加固，Flutter） |
 | 构建 | AGP 8.7.3 / Gradle 8.9 / Kotlin 1.9.24 / JDK 17 / compileSdk 35 |
 
-目标 App 使用了加固壳，dex 在运行时解密加载，模块会自行识别壳并在解密完成后安装 hook，无需额外配置。
+目标应用 `com.realtech.xiaocan` 使用了加固壳，dex 在运行时解密加载，模块会自行识别 `com.Proxy.ShellApplication` 并在解密完成后安装 hook，无需额外配置。
 
 ## 预期效果
 
