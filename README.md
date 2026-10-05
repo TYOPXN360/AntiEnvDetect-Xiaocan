@@ -6,7 +6,7 @@
 
 | 项 | 值 |
 |---|---|
-| 应用名 | **小蚕** |
+| 应用名 | **小蚕惠生活** |
 | 包名 | **`com.realtech.xiaocan`** |
 | 版本 | `3.21.2` |
 | 技术形态 | Flutter 应用，Java 层经 **V库加固壳**（`com.appsec` + `com.Proxy`，`libxloader.so` v1.5.2.23）保护，dex 在运行时解密到内存加载 |
@@ -88,7 +88,7 @@ RESP ok  {"code":0,...}
 | 框架 | LSPosed **2.x**（实测 2.2.0-it） |
 | LSPosed Manager | 2.2.0-it |
 | Android | minSdk **26** / 8.0 起 |
-| 目标应用 | 小蚕 / `com.realtech.xiaocan` **3.21.2**（V库加固，Flutter） |
+| 目标应用 | 小蚕惠生活 / `com.realtech.xiaocan` **3.21.2**（V库加固，Flutter） |
 | 构建 | AGP 8.7.3 / Gradle 8.9 / Kotlin 1.9.24 / JDK 17 / compileSdk 35 |
 
 目标应用 `com.realtech.xiaocan` 使用了加固壳，dex 在运行时解密加载，模块会自行识别 `com.Proxy.ShellApplication` 并在解密完成后安装 hook，无需额外配置。
