@@ -1,0 +1,10 @@
+id=dev.antienv
+name=AntiEnvDetect
+version=1.0.0
+versionCode=1
+author=anti-env-detect
+description=Intercepts root/hook/emulator environment detection and suppresses environment reporting.
+
+# 模块 UI 展示用的默认作用域。
+# 真正的静态作用域由 META-INF/xposed/scope.list 定义。
+defaultScope=com.realtech.xiaocan
